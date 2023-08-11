@@ -1,5 +1,9 @@
 :root {
   --main-color: #10cab7;
+  --secondary-color: #2c4755;
+  --section-padding: 60px;
+  --section-background: #f6f6f6;
+  --main-duration: 0.5s;
 }
 /* Start Global Rules */
 * {
@@ -16,6 +20,23 @@ body {
   margin-left: auto;
   margin-right: auto;
   width: 600px;
+}
+/* mobile */
+@media (min-width: 368px) {
+  .container {
+    width: 350px;
+  }
+}
+/* mobile */
+@media (min-width: 268px) {
+  .container {
+    width: 250px;
+  }
+}
+@media (min-width: 168px) {
+  .container {
+    width: 150px;
+  }
 }
 /* Small */
 @media (min-width: 768px) {
@@ -63,7 +84,7 @@ body {
   position: absolute;
   right: 0;
   min-width: 200px;
-  top: calc(100% + 20px);
+  top: calc(100% + 15px);
   display: none;
   z-index: 1;
 }
@@ -83,7 +104,7 @@ body {
   display: block;
   padding: 15px;
   text-decoration: none;
-  color: black;
+  color: #333;
   transition: 0.3s;
 }
 .header .container .links ul li a:hover {
@@ -121,7 +142,6 @@ body {
   background-image: url(../images/Landing.jpg);
   background-size: cover;
   height: calc(100vh - 64px);
-  margin: 0;
   position: relative;
 }
 .landing .intro-text {
@@ -130,6 +150,8 @@ body {
   top: 50%;
   text-align: center;
   transform: translate(-50%, -50%);
+  width: 320px;
+  max-width: 100%;
 }
 .landing .intro-text h1 {
   margin: 0;
@@ -141,5 +163,36 @@ body {
   font-size: 19px;
   line-height: 1.8;
 }
-
 /* End Landing Section  */
+/* Start Features Section */
+.features {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: #f6f6f6;
+}
+.features .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  column-gap: 20px;
+}
+.features .container .feat {
+  /* width: 320px;
+  max-width: 100%; */
+  padding: 20px;
+  text-align: center;
+}
+.features .container .feat i {
+  color: var(--main-color);
+  font-size: 40px;
+}
+.features .container .feat h3 {
+  font-weight: 800;
+  margin: 30px 0;
+}
+.features .container .feat p {
+  line-height: 1.8;
+  font-size: 17px;
+  color: #777;
+}
+
+/* End Features Section */
