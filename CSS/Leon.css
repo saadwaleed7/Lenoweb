@@ -1,3 +1,6 @@
+:root {
+  --main-color: #10cab7;
+}
 /* Start Global Rules */
 * {
   -webkit-box-sizing: border-box;
@@ -49,6 +52,9 @@ body {
 .header .container .links {
   position: relative;
 }
+.header .container .links .icon:hover span:nth-child(2) {
+  width: 100%;
+}
 .header .container .links ul {
   list-style: none;
   margin: 0;
@@ -59,6 +65,7 @@ body {
   min-width: 200px;
   top: calc(100% + 20px);
   display: none;
+  z-index: 1;
 }
 .header .container .links ul::before {
   content: "";
@@ -81,7 +88,7 @@ body {
 }
 .header .container .links ul li a:hover {
   padding-left: 25px;
-  color: #4fb6b6;
+  color: var(--main-color);
 }
 .header .container .links ul li:not(:last-child) a {
   border-bottom: solid 1px #ddd;
@@ -93,26 +100,46 @@ body {
   flex-wrap: wrap;
   justify-content: flex-end;
 }
-
-.header .container .links .icon:hover span:nth-child(2) {
-  width: 100%;
-}
 .header .container .links .icon span {
   background-color: #333;
   margin-bottom: 5px;
+  height: 2px;
 }
 .header .container .links .icon span:first-child {
   width: 100%;
-  height: 2px;
 }
 .header .container .links .icon span:nth-child(2) {
   width: 60%;
   transition: 0.3s;
-  height: 2px;
 }
 .header .container .links .icon span:last-child {
   width: 100%;
-  height: 2px;
+}
+/* End Header */
+/* Start Landing Section  */
+.landing {
+  background-image: url(../images/Landing.jpg);
+  background-size: cover;
+  height: calc(100vh - 64px);
+  margin: 0;
+  position: relative;
+}
+.landing .intro-text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+.landing .intro-text h1 {
+  margin: 0;
+  font-weight: bold;
+  font-size: 50px;
+  color: var(--main-color);
+}
+.landing .intro-text p {
+  font-size: 19px;
+  line-height: 1.8;
 }
 
-/* End Header */
+/* End Landing Section  */
