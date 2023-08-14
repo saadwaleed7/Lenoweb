@@ -1,3 +1,2 @@
 # Lenoweb
-Lenoweb
-Developed by my
+Lenoweb web development
